@@ -182,7 +182,8 @@ nnoremap <leader>vr :sp $MYVIMRC<cr>
 nnoremap <leader>hl :nohl<cr>
 
 " Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
+" -- Insert this into your own .vimrc.local file and include this file
+" if filereadable($HOME . "/dotfiles/.vimrc.local")
+"  source ~/dotfiles/.vimrc.local
+" endif
 
