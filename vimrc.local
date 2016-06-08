@@ -180,6 +180,7 @@ nnoremap <leader>\ :Ag<SPACE>
 nnoremap <leader>so :so $MYVIMRC<cr>
 nnoremap <leader>vr :sp $MYVIMRC<cr>
 nnoremap <leader>hl :nohl<cr>
+nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<cr>
 
 " Local config
 " -- Insert this into your own .vimrc.local file and include this file
