@@ -42,10 +42,10 @@ set colorcolumn=+1
 
 " Numbers
 set number
-set numberwidth=5
+set numberwidth=4
 
 " Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
+set list listchars=tab:--,trail:·,nbsp:·
 
 " Use one space, not two, after punctuation.
 set nojoinspaces
@@ -175,6 +175,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " bind \ (backward slash) to grep shortcut
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
 nnoremap <leader>\ :Ag<SPACE>
 nnoremap <leader>so :so $MYVIMRC<cr>
 nnoremap <leader>vr :sp $MYVIMRC<cr>
