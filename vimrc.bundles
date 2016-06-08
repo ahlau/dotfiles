@@ -46,7 +46,18 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
+
+" Customizations
 Plug 'vim-scripts/tComment'
+Plug 'thoughtbot/vim-rspec'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'Lokaltog/vim-powerline'
+Plug 'stephenmckinney/vim-solarized-powerline'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'mxw/vim-jsx'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'scrooloose/nerdtree'
+Plug 'chriskempson/base16-vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
