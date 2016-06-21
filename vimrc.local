@@ -64,6 +64,8 @@ nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd'
 
 " NERDTree bindings
 nnoremap <leader>n :NERDTreeToggle<CR>
+" .. close NERDTree on file open
+let NERDTreeQuitOnOpen=1
 " .. close if NERDTree is the last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
