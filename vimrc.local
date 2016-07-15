@@ -12,6 +12,7 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set cursorline    " cursorline highlight
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
@@ -219,5 +220,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
+
+" NERD Commenter
+"" Comment out a line in insert-mode
+inoremap \cc <C-o>:call NERDComment(0,"toggle")<C-m>
+nnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
+vnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 
 " More?
