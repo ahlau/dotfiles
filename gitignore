@@ -11,3 +11,6 @@ tags
 tmp/**/*
 !tmp/cache/.keep
 *.pyc
+node_modules/
+dist/
+npm-debug.log

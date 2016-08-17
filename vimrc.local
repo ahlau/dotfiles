@@ -50,7 +50,16 @@ set expandtab
 set textwidth=80
 set colorcolumn=+1
 
+<<<<<<< Updated upstream
 color railscasts
+=======
+" ColorScheme
+color pyte
+
+" Numbers
+set number
+set numberwidth=4
+>>>>>>> Stashed changes
 
 " Display extra whitespace
 set list listchars=tab:--,trail:·,nbsp:·
@@ -193,6 +202,8 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 " .. close if NERDTree is the last window open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" .. close on open file
+let NERDTreeQuitOnOpen=1
 
 " CTRL-P settings
 let g:ctrlp_working_path_mode = 'ra'
