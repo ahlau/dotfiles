@@ -27,3 +27,6 @@ alias gps="git push"
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias ss=subl
