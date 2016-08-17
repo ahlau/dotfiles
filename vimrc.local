@@ -50,11 +50,7 @@ set expandtab
 set textwidth=80
 set colorcolumn=+1
 
-<<<<<<< Updated upstream
 color railscasts
-=======
-" ColorScheme
-color pyte
 
 " Numbers
 set number
