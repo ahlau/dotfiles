@@ -46,12 +46,8 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
-
-set background=dark
-color railscasts
+color pyte
+set background=light
 
 " Numbers
 set number
@@ -235,3 +231,4 @@ nnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 vnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 
 " More?
+
