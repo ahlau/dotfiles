@@ -231,4 +231,10 @@ nnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 vnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 
 " More?
+color railscasts
+set background=dark
+highlight CursorLine cterm=underline ctermbg=NONE gui=underline
+highlight CursorColumn ctermbg=darkred
+nnoremap <Leader>cu :set cursorline!<CR>
+nnoremap <Leader>so :source ~/.vimrc.local<CR>
 

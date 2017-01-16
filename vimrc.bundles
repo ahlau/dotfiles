@@ -46,6 +46,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-haml'
+Plug 'bronson/vim-trailing-whitepsace'
 
 " customizations
 Plug 'vim-scripts/tComment'
@@ -61,6 +63,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'nikvdp/ejs-syntax'
 
 " color me rad (colorschemes)
 Plug 'jpo/vim-railscasts-theme'
