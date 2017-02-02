@@ -36,6 +36,7 @@ set autoread
 set hidden
 set history=1000
 "set shellpipe=2>/dev/null " this conflicts with Ag
+set shell=/bin/bash
 set re=1
 
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -81,10 +82,6 @@ augroup markdown
   au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
-" When the type of shell script is /bin/sh, assume a POSIX-compatible
-" shell for syntax highlighting purposes.
-let g:is_posix = 1
-
 " markdown preview
 let vim_markdown_preview_hotkey="<C-m>"
 let vim_markdown_preview_browser="Google Chrome"
@@ -107,49 +104,14 @@ inoremap <S-Tab> <c-n>
 " Switch between the last two files
 nnoremap <leader><space> <c-^>
 
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 " vim-test mappings
-nnoremap <silent> <Leader>t :TestFile<CR>
-nnoremap <silent> <Leader>s :TestNearest<CR>
-nnoremap <silent> <Leader>l :TestLast<CR>
-nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <Leader>rt :TestFile<CR>
+nnoremap <silent> <Leader>rn :TestNearest<CR>
+nnoremap <silent> <Leader>rl :TestLast<CR>
+nnoremap <silent> <Leader>ra :TestSuite<CR>
 nnoremap <silent> <leader>gt :TestVisit<CR>
 
-" Run commands that require an interactive shell
-nnoremap <Leader>r :RunInInteractiveShell<space>
-
-" Treat <li> and <p> tags like the block tags they are
-let g:html_indent_tags = 'li\|p'
-
-" Open new split panes to right and bottom, which feels more natural
-set splitbelow
-set splitright
-
-" Quicker window movement
-" doesn't work for some reason
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-h> <C-w>h
-nmap <C-l> <C-w>l
-
-" configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:syntastic_eruby_ruby_quiet_messages =
-    \ {"regex": "possibly useless use of a variable in void context"}
 nmap <leader>st :SyntasticToggleMode<cr>
-
-" Set spellfile to location that is guaranteed to exist, can be symlinked to
-" Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.
-set spellfile=$HOME/.vim-spell-en.utf-8.add
-
-" Autocomplete with dictionary words when spell check is on
-set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
@@ -158,6 +120,10 @@ set diffopt+=vertical
 imap jk <esc>
 imap kj <esc>
 imap <C-s> :w
+
+" quick splits
+nnoremap <leader>vv :vsp<CR>
+nnoremap <leader>vh :sp<CR>
 
 " save myself from missing the Shift key
 nnoremap ; :
