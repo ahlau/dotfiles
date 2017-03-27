@@ -60,10 +60,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'nikvdp/ejs-syntax'
+Plug 'airblade/vim-gitgutter'
 
 " color me rad (colorschemes)
 Plug 'jpo/vim-railscasts-theme'
