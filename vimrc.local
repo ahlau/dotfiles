@@ -47,9 +47,6 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
-color pyte
-set background=light
-
 " Numbers
 set number
 set numberwidth=4
@@ -198,8 +195,10 @@ nnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 vnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 
 " More?
-color railscasts
+color default
+" set background=light
 set background=dark
+
 highlight CursorLine cterm=underline ctermbg=NONE gui=underline
 highlight CursorColumn ctermbg=darkred
 nnoremap <Leader>cu :set cursorline!<CR>
