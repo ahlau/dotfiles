@@ -42,6 +42,9 @@ _load_settings "$HOME/.zsh/configs"
 [[ -f ~/.aliases ]] && source ~/.aliases
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
 # source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+plugins=( git bundler dotenv osx rake ruby zsh-syntax-highlighting )
 
