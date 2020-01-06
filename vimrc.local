@@ -18,7 +18,7 @@ set cursorline    " cursorline highlight
 set list listchars=tab:»·,trail:·,nbsp:·
 
 " Make it obvious where 80 characters is
-set textwidth=80
+" set textwidth=80
 " set colorcolumn=+1
 
 " Numbers
@@ -160,7 +160,7 @@ nnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 vnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 
 " More?
-color default
+color pyte
 " set background=light
 set background=dark
 
