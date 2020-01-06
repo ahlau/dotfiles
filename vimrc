@@ -77,6 +77,27 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 10
 let g:ctrlp_custom_ignore = {}
 
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+nnoremap <leader>\ :Ag<SPACE>
+nnoremap <leader>so :so $MYVIMRC<cr>
+nnoremap <leader>vr :sp $MYVIMRC<cr>
+nnoremap <leader>hl :nohl<cr>
+nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<cr>
+
+" NERDTree bindings
+nnoremap <leader>n :NERDTreeToggle<CR>
+" .. close NERDTree on file open
+let NERDTreeQuitOnOpen=1
+" .. close if NERDTree is the last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" .. close on open file
+let NERDTreeQuitOnOpen=1
+
+" CTRL-P settings
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_root_markers = ['.ctrlp']
+
 
 " Make it obvious where 80 characters is
 set textwidth=80
