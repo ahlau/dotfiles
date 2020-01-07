@@ -46,5 +46,4 @@ _load_settings "$HOME/.zsh/configs"
 # source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
 # source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-plugins=( git bundler dotenv osx rake ruby zsh-syntax-highlighting )
 

@@ -60,22 +60,35 @@ let vim_markdown_preview_github=0 " enable this to have Github API render markdo
 " Use one space, not two, after punctuation.
 set nojoinspaces
 
+" NERDTree bindings
+nnoremap <leader>n :NERDTreeToggle<CR>
+" .. close NERDTree on file open
+let NERDTreeQuitOnOpen=1
+" .. close if NERDTree is the last window open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" .. close on open file
+let NERDTreeQuitOnOpen=1
+
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
   " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 'ra'
+  let g:ctrlp_use_caching = 0
 endif
 
 " ctrl-p options
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_depth = 10
 let g:ctrlp_custom_ignore = {}
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_root_markers = ['.ctrlp']
 
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
