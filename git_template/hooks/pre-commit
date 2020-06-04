@@ -1,7 +1,3 @@
-#!/bin/sh
-
-local_hook="$HOME"/.git_template.local/hooks/pre-commit
-
-if [ -f "$local_hook" ]; then
-  . "$local_hook"
-fi
+#!/bin/bash
+# Run Rubocop only for new, modified, or renamed files, and, in case of violations, it causes the commit to fail.
+git status -s | sed -e ' s/.* \-\>/R /g' | grep -E 'A|M|R' | awk '{print $2}' | xargs rubocop --display-cop-names --extra-details --parallel --force-exclusion

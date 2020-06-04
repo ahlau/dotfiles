@@ -18,7 +18,7 @@
 	editor = vim
 [merge]
   ff = only
-	tool = vimdiff
+  tool = opendiff
 [commit]
   template = ~/.gitmessage
 [fetch]
@@ -28,9 +28,10 @@
 [include]
   path = ~/.gitconfig.local
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

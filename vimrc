@@ -53,7 +53,7 @@ set expandtab
 set list listchars=tab:»·,trail:·,nbsp:·
 
 " markdown preview
-let vim_markdown_preview_hotkey="<C-m>"
+let vim_markdown_preview_hotkey="<leader>m"
 let vim_markdown_preview_browser="Google Chrome"
 let vim_markdown_preview_github=0 " enable this to have Github API render markdown
 
@@ -97,20 +97,6 @@ nnoremap <leader>so :so $MYVIMRC<cr>
 nnoremap <leader>vr :sp $MYVIMRC<cr>
 nnoremap <leader>hl :nohl<cr>
 nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<cr>
-
-" NERDTree bindings
-nnoremap <leader>n :NERDTreeToggle<CR>
-" .. close NERDTree on file open
-let NERDTreeQuitOnOpen=1
-" .. close if NERDTree is the last window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" .. close on open file
-let NERDTreeQuitOnOpen=1
-
-" CTRL-P settings
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_root_markers = ['.ctrlp']
-
 
 " Make it obvious where 80 characters is
 " set textwidth=80
@@ -173,8 +159,6 @@ set spellfile=$HOME/.vim-spell-en.utf-8.add
 
 " Autocomplete with dictionary words when spell check is on
 set complete+=kspell
-
-" thoughtbot's vim dotfiles for running spec inside vim
 
 " Always use vertical diffs
 " Local config
