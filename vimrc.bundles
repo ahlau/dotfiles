@@ -66,12 +66,15 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'nikvdp/ejs-syntax'
 Plug 'airblade/vim-gitgutter'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " color me rad (colorschemes)
 Plug 'jpo/vim-railscasts-theme'
 Plug 'vim-scripts/pyte'
 Plug 'vim-scripts/ironman.vim'
 Plug 'vim-scripts/summerfruit256.vim'
+
+Plug 'rafi/awesome-vim-colorschemes'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

@@ -89,7 +89,7 @@ nnoremap <silent> <leader>gt :TestVisit<CR>
 nmap <leader>st :SyntasticToggleMode<cr>
 
 " Always use vertical diffs
-set diffopt+=vertical
+" set diffopt+=vertical
 
 " Make jk/kj escape
 imap jk <esc>
@@ -139,7 +139,7 @@ nnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 vnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 
 " More?
-color pyte
+" color pyte
 " set background=light
 set background=dark
 
@@ -151,14 +151,14 @@ nnoremap <Leader>so :source ~/.vimrc<CR>
 
 " VIM RSpec
 " RSpec.vim mappings
-map <Leader>rr :call RunCurrentSpecFile()<CR>
-map <Leader>rn :call RunNearestSpec()<CR>
+let g:rspec_runner = "os_x_iterm2"
+map <Leader>rt :call RunCurrentSpecFile()<CR>
+map <Leader>rs :call RunNearestSpec()<CR>
 map <Leader>rl :call RunLastSpec()<CR>
 map <Leader>ra :call RunAllSpecs()<CR>
 
 " No auto line breaks
 set formatoptions-=t
 
-
-set background=light
-
+" Make VIM use system clipboard so you can yank and paste
+set clipboard=unnamed

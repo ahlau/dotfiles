@@ -28,6 +28,7 @@ alias gps="git push"
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
-alias reset='rake db:disconnect db:drop db:create db:migrate;./bin/rake db:seed;puma-dev -stop'
+alias reset='rake db:disconnect db:drop db:create db:migrate; rake db:seed; puma-dev -stop; rm log/development.log log/test.log;'
 alias ghk="zsh .git/hooks/pre-commit"
+alias ss="subl"
 
