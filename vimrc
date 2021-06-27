@@ -174,10 +174,13 @@ if has("gui_running")
 endif
 
 " Use numbertoggle plugin
-:set number relativenumber
+":set number relativenumber
 
 " Highlight searches
 :set hlsearch!
+
+" Set search to case insensitive for all lower case
+:set ignorecase
 
 :augroup numbertoggle
 :  autocmd!

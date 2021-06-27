@@ -24,11 +24,17 @@ alias gcl="git clone"
 alias gbr="git branch"
 alias gpu="git pull"
 alias gps="git push"
+alias gg="git grep"
+alias px="ps aux | grep "
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
-alias reset='rake db:disconnect db:drop db:create db:migrate; rake db:seed; puma-dev -stop; rm log/development.log log/test.log;'
+alias remigrate='rails db:disconnect db:drop log:clear db:create db:migrate; rails db:seed; puma-dev -stop;'
+alias reset='rails db:disconnect log:clear db:reset; puma-dev -stop;'
 alias ghk="zsh .git/hooks/pre-commit"
 alias ss="subl"
 
+alias fspec="RSPEC_FEATURES=true RSPEC_CAPYBARA_DRIVER=chrome rspec"
+alias herokuw="heroku run rails console --app wrapbook-app-production -s private-s"
+alias ra="git status -s | sed -e ' s/.* \-\>/R /g' | grep -E 'A|M|R' | awk '{print $2}' | xargs rubocop -a --display-cop-names --extra-details --force-exclusion"

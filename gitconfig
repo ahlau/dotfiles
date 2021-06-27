@@ -12,14 +12,14 @@
   co = checkout
   pf = push --force-with-lease
   st = status
-	cp = cherry-pick
+  cp = cherry-pick
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-	editor = vim
+  editor = vim
 [merge]
-  tool = sublime-merge
-[mergetool "sublime-merge"]
+  tool = smerge
+[mergetool "smerge"]
 [commit]
   template = ~/.gitmessage
 [fetch]
@@ -29,10 +29,12 @@
 [include]
   path = ~/.gitconfig.local
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
+  process = git-lfs filter-process
 [user]
-	email = alfred@betatypelabs.com
-	name = Alfred Lau
+  email = alfred@betatypelabs.com
+  name = Alfred Lau
+[pull]
+  ff = only
