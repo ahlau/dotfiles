@@ -166,13 +166,14 @@ if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
 
-if has("gui_running")
-   let s:uname = system("uname")
-   if s:uname == "Darwin\n"
-      set guifont=Menlo\ for\ Powerline:h14
-   endif
-endif
-
+" if has("gui_running")
+   " let s:uname = system("uname")
+   " if s:uname == \"Darwin\n\"
+      " " set guifont=Menlo\ for\ Powerline:h14
+      " set guifont=MesloLGS\ NF:h18
+   " endif
+" endif
+"
 " Use numbertoggle plugin
 ":set number relativenumber
 
